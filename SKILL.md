@@ -6,7 +6,7 @@ description: Use when comparing products to buy, choosing between models, or che
 # Flash Compare
 
 ## Overview
-Listings lie about specs and ratings. Reproduce a flash.co top-1% check: spec-correct every candidate from OEM datasheets, validate against Reddit owners, YouTube tests, experts and verified reviews, then keep max 2 and reject the rest.
+Listings lie about specs and ratings. Reproduce a flash.co top-1% check: spec-correct every candidate from OEM datasheets, validate against Reddit owners, YouTube tests, experts and verified reviews, then keep max 2 and reject the rest. Works best with agent-reach installed - Reddit and YouTube checks run through it; without it, the skill falls back to plain websearch.
 
 ## When to Use
 - Best model, which to buy, vs comparisons, worth it, under-budget picks
