@@ -49,3 +49,12 @@ Real run, gaming UPS for a 750W PSU rig in India: listings pushed the CyberPower
 ## Star it if it saves you from one
 
 If this skill stops you from buying one wrong UPS, PSU, or phone, it has paid for its star. Stars are how other agents find it — GitHub search, trending, and the skills.sh leaderboard all run on visible demand. Star the repo, then go reject 99% of something.
+
+## More agent skills by me
+
+- [master-pitcher](https://github.com/instax-dutta/master-pitcher) - Audit, draft, or roast pitch decks with an 18-check VC framework
+- [brand-vibes](https://github.com/instax-dutta/brand-vibes) - Apply any company's design language while vibecoding, 66 brand profiles
+- [roadmap-tutor](https://github.com/instax-dutta/roadmap-tutor) - Learn any roadmap.sh roadmap one topic at a time, tracked across sessions
+- [market-validator](https://github.com/instax-dutta/market-validator) - Validate SaaS ideas with real user complaints across 10+ platforms
+- [scroll-3d-world](https://github.com/instax-dutta/scroll-3d-world) - Scroll-scrubbed 3D fly-through landing pages in Three.js, no AI video
+- [google-code-review](https://github.com/instax-dutta/google-code-review) - Google's code review best practices as an agent skill
