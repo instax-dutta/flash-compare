@@ -2,20 +2,50 @@
 
 # flash-compare
 
-This is exactly how flash.co works lol.
+This is exactly how flash.co works lol — except it runs on **your** shortlist, **your** budget, inside **your** agent session.
 
-Flash's agents gather the best products from AI tools, marketplaces and web search, then validate every rating and review against Reddit, YouTube, experts and real buyers. Only the top 1% that fits your need gets in, at the best price out there. This skill reproduces that loop for any product comparison: spec-correct from OEM datasheets, validate against Reddit owners + YouTube tests + experts + verified reviews, keep max 2 and reject the rest.
+## Why this exists
 
-## Install
+flash.co's pitch: agents gather candidates from AI tools, marketplaces and web search, then validate every rating against Reddit, YouTube, experts and real buyers. Only the top 1% gets in.
+
+The catch, straight from their own pages:
+
+- They pick what **they stock**. Your shortlist is not their catalogue.
+- Their words: "FLASH EARNS AN AFFILIATE FEE". Rankings with a revenue cut baked in.
+- Rejects show up as "we saved you a bad buy" with **no reason given**. You never see the 99% or why it failed.
+
+flash-compare is the open version of that same loop:
+
+| | flash.co | flash-compare |
+|---|---|---|
+| Candidates | whatever Flash stocks | any products you shortlist |
+| Validation | Reddit, YouTube, experts, buyers | same, via agent-reach in your terminal |
+| Rejects | hidden, no reason shown | rejected explicitly, one-line cause each |
+| Price check | their partner stores | any 3+ stores you name |
+| Verdict limit | top 1% gets in | keep max 2, rest die in writing |
+| Cost | affiliate cut baked in | free, MIT licensed |
+
+## Install (30 seconds)
 
 ```bash
 npx skills add instax-dutta/flash-compare
 ```
 
-skills.sh indexes public repos automatically, so publishing here = published there. Check `https://skills.sh/instax-dutta/flash-compare` after push.
+That is the whole setup. No API keys, no store account, no affiliate links.
 
-## Use
+## How an agent uses it
 
-Load the `flash-compare` skill when comparing products to buy, choosing between models, or checking if a listing is worth it vs real owner feedback. Agent-reach first (`doctor`, `rdt search/read`, `yt-dlp`, `check-update`), normal websearch/webfetch only as fallback.
+1. Spec-correct every candidate from the OEM datasheet (retail tables lie about waveform, USB, watts).
+2. Validate against Reddit owners with real load numbers, YouTube load tests + comment sentiment, 2+ independent guides, and verified buyer reviews with PSU/GPU/minutes in them.
+3. Throw out seeded 5-stars, flag inflated listings, compare 3+ stores.
+4. Keep max 2. Everything else gets a one-line disqualifier tied to the brief.
 
-See `references/scoring-template.md` for the output contract.
+Full loop + commands: `SKILL.md`. Output contract: `references/scoring-template.md`.
+
+## Proof it works
+
+Real run, gaming UPS for a 750W PSU rig in India: listings pushed the CyberPower UT2200E (1320W) as best value and the APC BR1500G as premium. Owner validation flipped both — UT2200E extrapolated to 5-8 min at gaming load with 1.5-2yr battery deaths reported, BR1500G had verified sudden-cut failures above 250W despite its 865W label. Kept the APC BVX2200LI with conditions, rejected 6 others with causes. That is one saved bad buy.
+
+## Star it if it saves you from one
+
+If this skill stops you from buying one wrong UPS, PSU, or phone, it has paid for its star. Stars are how other agents find it — GitHub search, trending, and the skills.sh leaderboard all run on visible demand. Star the repo, then go reject 99% of something.
